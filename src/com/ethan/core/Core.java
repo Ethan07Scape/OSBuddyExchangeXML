@@ -10,11 +10,11 @@ import java.util.Map;
 /**
  * Created by Ethan on 1/9/2018.
  */
-public class Main {
+public class Core {
     private RSExchange rsExchange;
     private Map<String, RSItem> exampleMap = new HashMap<>();
 
-    public Main() {
+    public Core() {
         rsExchange = new RSExchange("https://rsbuddy.com/exchange/summary.json");
         new XMLParser("https://ghostbin.com/paste/ua7pz/raw", exampleMap);
         iterateMap();
@@ -22,7 +22,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        new Main();
+        new Core();
     }
 
     private void iterateMap() {
